@@ -1,0 +1,21 @@
+abstract class A {
+	abstract void display1();
+}
+class B extends A {
+	@Override
+	void display1() {
+		System.out.println("A class method - override");
+	}
+	void display2() {
+		System.out.println("B class method");
+	}
+}
+class Test2 {
+	public static void main(String args[]) {
+	//A obj1 =new A();		obj1.display1();	//obj1.display2();	
+	B obj2 = new B();		obj2.display1();	obj2.display2();
+	//B obj3 = new A();
+	A obj4 = new B();		//sub class object super class reference. 
+	//obj4.display1();	//obj4.display2();
+	}
+}
